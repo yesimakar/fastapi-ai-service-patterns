@@ -1,0 +1,6 @@
+{
+  "prompt": "Evaluate whether this output mentions validation and avoids secrets.",
+  "output": "The service uses structured validation and fallback handling before returning responses.",
+  "required_terms": ["validation", "fallback"],
+  "forbidden_terms": ["secret"]
+}

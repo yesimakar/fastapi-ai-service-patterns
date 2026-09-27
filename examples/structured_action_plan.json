@@ -1,0 +1,8 @@
+{
+  "prompt": "Create an action plan for making an AI-backed API more reliable.",
+  "schema_name": "action_plan",
+  "context": [
+    "The service needs retries, fallback behavior, evaluation hooks, and request-level diagnostics."
+  ],
+  "enable_evaluation": true
+}

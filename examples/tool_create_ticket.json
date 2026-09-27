@@ -1,0 +1,7 @@
+{
+  "tool_name": "create_ticket",
+  "arguments": {
+    "title": "Add fallback handling",
+    "summary": "Implement fallback behavior for transient LLM provider failures."
+  }
+}

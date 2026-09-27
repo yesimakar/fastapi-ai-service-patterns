@@ -1,0 +1,41 @@
+[project]
+name = "fastapi-ai-service-patterns"
+version = "0.1.0"
+description = "Production-style FastAPI patterns for LLM-backed services, including structured outputs, streaming, retries, evaluation hooks, guardrails, and observability."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "Yesim Akar" }]
+dependencies = [
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.30,<1",
+    "pydantic>=2.7,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9",
+    "httpx2>=2.10,<3",
+]
+llm = [
+    "openai>=1.40,<2",
+    "anthropic>=0.34,<1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0,<9",
+    "httpx2>=2.10,<3",
+]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+exclude = ["tests*", "docs*", "examples*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
